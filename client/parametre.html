@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/client.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="./js/client.js"></script>
+  <script src="./js/parametre.js"></script>
+  <link rel="stylesheet" href="./css/parameter.css">
+  <link rel="stylesheet" href="./css/profile.css">
+  <script src="https://kit.fontawesome.com/4d7abc814c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="https://foodtiger.site/vendor/intltelinput/build/css/intlTelInput.css">
+  <script src="https://foodtiger.site/vendor/intltelinput/build/js/intlTelInput.js"></script>
+  <script src="https://foodtiger.site/vendor/intltelinput/build/js/utils.js"></script>
+  <title>Client | maison de la bénédiction</title>
+</head>
+
+<body>
+  <div class="load">
+    <span class="loaderpa"></span>
+  </div>
+  <section class="nav-bar">
+    <div class="logo">
+      <a href=""></i><span>H</span>ouse of blessing</a>
+    </div>
+    <div class="pages">
+      <ul>
+        <li><a href="client.html"><i class="fa-solid fa-gauge-high"></i>&nbsp; Dashbord</a></li>
+        <li><a href="commande.html"><i class="fa-solid fa-basket-shopping"></i>&nbsp;Mes commandes</a></li>
+        <li><a href="#"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;Support client </a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="tete-home">
+    <div class="tete">
+      <div class="zone-search">
+        <div class="input-group">
+          <input class="search" type="text" placeholder="Search for...">
+          <button class="btn-search" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="user">
+      <div class="user-profil">
+        <div class="name-user">Esdras Client</div>
+        <div class="photo-profil"><img id="profile-pic"
+            src="./jeune-homme-afro-americain-assis-yeux-fermes-bible-dans-ses-mains.jpg" alt=""></div>
+      </div>
+      <div class="more-user">
+        <div class="sous-menu-profil">
+          <ul>
+            <li><a href="profile.html"><i class="fa-solid fa-user"></i>&nbsp; Profile</a></li>
+            <li><a href="./parametre.html"><i class="fa-solid fa-gear"></i>&nbsp; Parametre</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>&nbsp; Se deconnecter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pannier">
+      <i class="fa-solid fa-cart-shopping"></i>&nbsp;<span>cart<div class="number-produit-cart">0</div></span>
+    </div>
+    <section class="edit-profil">
+      <section class="zone-page">
+        <div class="page">PARAMETRE &nbsp; &nbsp;<span class="chemin"><a href="client.html"><i class="fa-solid fa-house"
+                style="color:#ffb24d;"></i>&nbsp;&nbsp;/&nbsp;&nbsp;</a><a href="./parametre.html">Parametre</a></span>
+        </div>
+      </section>
+      <div class="container-edit-profil">
+        <div class="title"> <span>E</span>dit profil</div>
+        <div class="formulaire">
+          <form method="post" action="">
+            <div class="nom-prenom">
+              <input class="Nom" placeholder="Nom" type="text" name="name" value="Esdras" required autofocus>
+              <input class="Prenom" placeholder="Prenom" type="text" name="prenom" value="joyeux" required autofocus>
+            </div>
+            <input class="Email" placeholder="Email" type="email" name="email" value="esdrasjeipkwop.megasoft@gmail.com"
+              required>
+            <input class="Phone" placeholder="Phone" type="phone" name="phone" value="675851010" required>
+            <input id="btn-submit" type="submit" value="Save">
+          </form>
+        </div>
+    </section>
+  </section>

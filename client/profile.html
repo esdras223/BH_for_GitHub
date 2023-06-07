@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/jquery-3.6.3.js"></script>
+  <link rel="stylesheet" href="./css/client.css">
+  <link rel="stylesheet" href="./css/profile.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="./js/client.js"></script>
+  <script src="https://kit.fontawesome.com/4d7abc814c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Client | maison de la bénédiction</title>
+</head>
+
+<body>
+  <div class="load">
+    <span class="loaderp"></span>
+  </div>
+  <script>
+    $(window).on('load', function () {
+      $('.load').fadeOut();
+      $('.loaderp').fadeOut();
+    });
+  </script>
+  <section class="nav-bar">
+    <div class="logo">
+      <a href=""></i><span>H</span>ouse of blessing</a>
+    </div>
+    <div class="pages">
+      <ul>
+        <li><a href="client.html"><i class="fa-solid fa-gauge-high"></i>&nbsp; Dashbord</a></li>
+        <li><a href="commande.html"><i class="fa-solid fa-basket-shopping"></i>&nbsp;Mes commandes</a></li>
+        <li><a href="#"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;Support client </a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="tete-home">
+    <div class="tete">
+      <div class="zone-search">
+        <div class="input-group">
+          <input class="search" type="text" placeholder="Search for...">
+          <button class="btn-search" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="user">
+      <div class="user-profil">
+        <div class="name-user">Esdras Client</div>
+        <div class="photo-profil"><img id="profile-pic"
+            src="./jeune-homme-afro-americain-assis-yeux-fermes-bible-dans-ses-mains.jpg" alt=""></div>
+      </div>
+      <div class="more-user">
+        <div class="sous-menu-profil">
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-user"></i>&nbsp; Profile</a></li>
+            <li><a href="parametre.html"><i class="fa-solid fa-gear"></i></i>&nbsp; Paramètre</a></li>
+            <li><a href="#" onclick="void(0)"><i class="fa-solid fa-right-from-bracket"></i>&nbsp; Se deconnecter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pannier">
+      <i class="fa-solid fa-cart-shopping"></i>&nbsp;<span>cart<div class="number-produit-cart">0</div></span>
+    </div>
+  </section>
+  <section class="zoom-profil">
+    <section class="zone-page">
+      <div class="page">PROFIL &nbsp; &nbsp;<span class="chemin"><a href="client.html"><i class="fa-solid fa-house"
+              style="color:#ffb24d;"></i>&nbsp;&nbsp;/&nbsp;&nbsp;</a><a href="profile.html">Profile</a></span></div>
+    </section>
+    <div class="view-profile">
+      <div class="vp-photo-profil">
+        <i class="fa-solid fa-user fa-3x" id="user"></i>
+      </div>
+      <div class="btn-modif-photo-profil">
+        <i class="fa-solid fa-pencil"></i>
+        <script>
+          $(document).ready(function () {
+            $('.btn-modif-photo-profil').click(function () {
+              $('<input type="file" accept="image/png, image/jpeg" max-size="5000000">').on('change', function () {
+                var file = this.files[0];
+                if (file.size > 5000000) {
+                  alert('Le fichier sélectionné est trop volumineux. Veuillez sélectionner un fichier de moins de 5 Mo.');
+                  return;
+                }
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                  var img = new Image();
+                  img.onload = function () {
+                    if (img.width < 800 || img.height < 600) {
+                      alert('L\'image sélectionnée n\'a pas une résolution suffisante. Veuillez sélectionner une image d\'au moins 800x600 pixels.');
+                      return;
+                    }
+                    location.reload()
+                    $('.vp-photo-profil').css('background-image', 'url(' + e.target.result + ')');
+                    $('.photo-profil').css('background-image', 'url(' + e.target.result + ')');
+                    $("#user").hide();
+                    $("#profile-pic").hide();
+                  };
+                  img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+              }).click();
+            });
+          });                        
+        </script>
+      </div>
+      <div class="user-name">
+        <span class="name">Esdras Joyeux</span><br />
+        <span class="type">CLIENT</span>
+      </div>
+      <div class="email">
+        <p><i class="fa-solid fa-envelope"></i> &nbsp;Email</p>
+        <p>esdrasjeipkwop.megasoft@gmail.com</p>
+      </div>
+      <div class="phone">
+        <p><i class="fa-solid fa-phone"></i>&nbsp;N°Mobile</p>
+        <p>+237 675851010</p>
+      </div>
+      <div class="date-creation">
+        <p><i class="fa-solid fa-calendar-days"></i>&nbsp;Date de création</p>
+        Apr 29,2023
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

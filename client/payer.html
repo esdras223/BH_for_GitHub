@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./js/jquery-3.6.3.js"></script>
+    <script src="./js/payer.js"></script>
+    <link rel="stylesheet" href="./css/payer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/client.js"></script>
+    <script src="https://kit.fontawesome.com/4d7abc814c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Payer | maison de la bénédiction</title>
+</head>
+
+<body>
+    <div class="load">
+        <span class="loader"></span>
+    </div>
+    <section class="nav-bar">
+        <div class="logo">
+            <a href=""></i><span>H</span>ouse of blessing</a>
+        </div>
+        <div class="pages">
+            <ul>
+                <li><a href="client.html"><i class="fa-solid fa-gauge-high"></i>&nbsp; Dashbord</a></li>
+                <li><a href="commande.html"><i class="fa-solid fa-basket-shopping"></i>&nbsp;Mes commandes</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;Support client </a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="tete-home">
+        <div class="tete">
+            <div class="zone-search">
+                <div class="input-group">
+                    <input class="search" type="text" placeholder="Search for...">
+                    <button class="btn-search" type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="user">
+            <div class="user-profil">
+                <div class="name-user">Esdras Client</div>
+                <div class="photo-profil"><img id="profile-pic"
+                        src="./jeune-homme-afro-americain-assis-yeux-fermes-bible-dans-ses-mains.jpg" alt=""></div>
+            </div>
+            <div class="more-user">
+                <div class="sous-menu-profil">
+                    <ul>
+                        <li><a href="profile.html"><i class="fa-solid fa-user"></i>&nbsp; Profile</a></li>
+                        <li><a href="parametre.html"><i class="fa-solid fa-gear"></i>&nbsp; Parametre</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>&nbsp; Se deconnecter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="pannier">
+            <i class="fa-solid fa-cart-shopping"></i>&nbsp;<span>cart<div class="number-produit-cart">0</div></span>
+        </div>
+        <div id="myModal-pannier" class="modal-dialog-pannier">
+            <div class="modal-contains-elt-pannier">
+                <div class="modal-header-eltpannier">
+                    <h5 class="modalTitle-eltpannier">Mon pannier</h5>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="list-elt-addpannier">
+                    <div class="pannier-items">
+
+                    </div>
+                </div>
+                <div class="msg-aucun-produit">vous n'avez aucun articlez dans votre pannier. Remplissez le!! </div>
+                <div class="subtotal-payer" style="display: none;">
+                    <div class="subtotal-produit-contains">
+                        <div class="subtotal-produit">Montant total:<span class="finalprice"></span> FCFA</div>
+                    </div>
+                    <div class="payer-contains">
+                        <a href="./payer.html"><button class="payer">Me livrer</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="zone-page">
+        <div class="page">PAYER &nbsp; &nbsp;<span class="chemin"><a href="client.html"><i class="fa-solid fa-house"
+                        style="color:#ffb24d;"></i>&nbsp;&nbsp;/&nbsp;&nbsp;</a><a href="payer.html">Payer</a></span>
+        </div>
+    </section>
+    <section class="paid-zone">
+        <div class="container-principal">
+            <div class="container-primaire">
+                <div class="container-produit">
+                    <p class="title"> <span style="color:#ffb24d">L</span>iste de produit
+                        <hr>
+                    </p>
+                    <div class="list-elt-addpannier">
+                        <div class="pannier-items">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container-adresse-date">
+                    <p class="title"> <span style="color:#ffb24d">I</span>nfo livraison
+                        <hr>
+                    </p>
+                    <div class="info-livraison">
+                        <form action="" method="post">
+                            <label for="datelivraison">Date de livraison</label>
+                            <input type="date" name="datelivraison" id="datelivraison"><br>
+                            <textarea name="adresse" id="adresse" cols="17"
+                                rows="2">Adresse de reception de la commande</textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container-secondaire">
+                <div class="container-paid">
+                    <p class="title">
+                        <span style="color:#ffb24d">P</span>ayer
+                        <hr>
+                    </p>
+                    <div class="subtotal-produit-contains">
+                        <div class="subtotal-produit" style="font-size: 1.5em;">Montant total:<span
+                                class="finalprice"></span> FCFA</div>
+                    </div>
+                    <div class="option-radio-check">
+                        <div>
+                            <input type="radio" id="cash" name="payment" value="cash"> <span class="paymentmode-title">
+                                &nbsp; Paiement en cash</span>
+                            <label for="cash"></label>
+                        </div>
+                        <div>
+                            <input type="radio" id="orange" name="payment" value="orange"><span
+                                class="paymentmode-title">&nbsp;&nbsp;&nbsp;Paiement par Orange Money</span>
+                            <label for="orange"></label>
+                        </div>
+                        <div>
+                            <input type="radio" id="mobile-money" name="payment" value="mobile-money"><span
+                                class="paymentmode-title">&nbsp;&nbsp;&nbsp;Paiement par Mobile Money</span>
+                            <label for="mobile-money"></label>
+                        </div>
+                    </div>
+                    <div class="condition">
+                        <div class="cont-condition">
+                            <input type="checkbox" name="condition" id="condition">
+                            <span class="condition-text"> J'accepte les <a href="#">condition d'utilisation</a> et
+                                <a href="#">la politique
+                                    de confidentialité.</a></span>
+                        </div>
+                    </div>
+                    <div class="paiement">
+                        <form action="" method="post">
+                            <button class="payer-commande" type="submit">
+                                Passer la commande
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+</body>
+
+</html>

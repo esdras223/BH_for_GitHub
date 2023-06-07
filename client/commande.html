@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/jsclient/client.js"></script>
+  <link rel="stylesheet" href="/cssclient/client.css">
+  <script src="/jsclient/jquery-3.6.3.js"></script>
+  <script src="/jsclient/client.js"></script>
+  <link rel="stylesheet" href="/cssclient/commande.css">
+  <script src="https://kit.fontawesome.com/4d7abc814c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Commande | maison de la bénédiction</title>
+</head>
+
+<body>
+  <div class="load">
+    <span class="loader"></span>
+  </div>
+  <script>
+    $(window).on('load', function () {
+      $('.loader').fadeOut('slow');
+    });
+  </script>
+  <section class="nav-bar">
+    <div class="logo">
+      <a href=""></i><span>H</span>ouse of blessing</a>
+    </div>
+    <div class="pages">
+      <ul>
+        <li><a href="client.html"><i class="fa-solid fa-gauge-high"></i>&nbsp; Dashbord</a></li>
+        <li><a href="commande.html"><i class="fa-solid fa-basket-shopping"></i>&nbsp;Mes commandes</a></li>
+        <li><a href="#"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;Support client </a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="tete-home">
+    <div class="tete">
+      <div class="zone-search">
+        <div class="input-group">
+          <input class="search" type="text" placeholder="Search for...">
+          <button class="btn-search" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="user">
+      <div class="user-profil">
+        <div class="name-user">Esdras Client</div>
+        <div class="photo-profil"><img id="profile-pic"
+            src="./jeune-homme-afro-americain-assis-yeux-fermes-bible-dans-ses-mains.jpg" alt=""></div>
+      </div>
+      <div class="more-user">
+        <div class="sous-menu-profil">
+          <ul>
+            <li><a href="profile.html"><i class="fa-solid fa-user"></i>&nbsp; Profile</a></li>
+            <li><a href="parametre.html"><i class="fa-solid fa-gear"></i>&nbsp; Parametre</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>&nbsp; Se deconnecter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pannier">
+      <i class="fa-solid fa-cart-shopping"></i>&nbsp;<span>cart<div class="number-produit-cart">0</div></span>
+    </div>
+  </section>
+  <section class="zone-page">
+    <div class="page"> <span>C</span>ommande</div>
+  </section>
+  <section class="search-commande">
+    <div class="container-search-commande">
+      <form action="" method="post">
+        <div class="simple-search">
+          <button class="btn-search-commande" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input type="search" name="search" id="search" placeholder="Search for...">
+        </div>
+        <div class="separateur"></div>
+        <div class="date-search">
+          <div class="first-date">
+            <i class="fa-solid fa-calendar-days"></i>&nbsp;<input type="date" name="first-date" id="date-first">
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="last-date">
+            <i class="fa-solid fa-calendar-days"></i>&nbsp;<input type="date" name="last-date" id="date-last">
+          </div>
+        </div>
+        <div class="separateur"></div>
+        <div class="btn-filter">
+          <input type="submit" value="Filtrer">
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="table-order">
+    <div class="container-table-orders">
+      <table class="order-client">
+        <thead>
+          <tr>
+            <div class="container-attribut">
+              <th class="attribut">N°</th>
+              <th class="attribut">Référence</th>
+              <th class="attribut">Date</th>
+              <th class="attribut">Nom client</th>
+              <th class="attribut">Montant</th>
+              <th class="attribut">Etat</th>
+              <th class="attribut">Statut</th>
+              <th class="attribut">Retard</th>
+            </div>
+          </tr>
+          <tr class="rows">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td class="order-etat">
+              <div class="appro">
+                Approuvé
+              </div>
+            </td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr class="rows">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td class="oder-etat">
+              <div class="rejeté">
+                rejeté
+              </div>
+            </td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr class="rows">
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td class="oder-etat">
+              <div class="attente">
+                En attente
+              </div>
+            </td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </section>
+</body>
+
+</html>
