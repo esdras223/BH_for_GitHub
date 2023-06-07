@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr" class="notranslate">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/cssclient/client.css">
+  <script src="/jsclient/jquery-3.6.3.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/jsclient/client.js"></script>
+  <script src="https://kit.fontawesome.com/4d7abc814c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Client | maison de la bénédiction</title>
+</head>
+
+<body>
+  <!-- <div class="load">
+    <span class="loader"></span>
+  </div> -->
+  <section class="nav-bar">
+    <div class="logo">
+      <a href=""></i><span>H</span>ouse of blessing</a>
+    </div>
+    <div class="pages">
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-gauge-high"></i>&nbsp; Dashbord</a></li>
+        <li><a href="commande.html"><i class="fa-solid fa-basket-shopping"></i>&nbsp;Mes commandes</a></li>
+        <li><a href="#"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;Envoyez nous un message </a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="tete-home">
+    <div class="tete">
+      <div class="zone-search">
+        <div class="input-group">
+          <input class="search" type="text" placeholder="Search for...">
+          <button class="btn-search" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="user">
+      <div class="user-profil">
+        <div class="name-user">Esdras Client</div>
+        <div class="photo-profil"><img id="profile-pic"
+            src="./jeune-homme-afro-americain-assis-yeux-fermes-bible-dans-ses-mains.jpg" alt=""></div>
+      </div>
+      <div class="more-user">
+        <div class="sous-menu-profil">
+          <ul>
+            <li><a href="profile.html"><i class="fa-solid fa-user"></i>&nbsp; Profile</a></li>
+            <li><a href="parametre.html"><i class="fa-solid fa-gear"></i>&nbsp; Parametre</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>&nbsp; Se deconnecter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pannier">
+      <i class="fa-solid fa-cart-shopping"></i>&nbsp;<span>cart<div class="number-produit-cart">0</div></span>
+    </div>
+    <div id="myModal-pannier" class="modal-dialog-pannier">
+      <div class="modal-contains-elt-pannier">
+        <div class="modal-header-eltpannier">
+          <h5 class="modalTitle-eltpannier">Mon pannier</h5>
+          <span class="close">&times;</span>
+        </div>
+        <div class="list-elt-addpannier">
+          <div class="pannier-items">
+
+          </div>
+        </div>
+        <div class="msg-aucun-produit">vous n'avez aucun articlez dans votre pannier. Remplissez le!! </div>
+        <div class="subtotal-payer" style="display: none;">
+          <div class="subtotal-produit-contains">
+            <div class="subtotal-produit">Montant total:<span class="finalprice"></span> FCFA</div>
+          </div>
+          <div class="payer-contains">
+            <a href="./payer.html"><button class="payer">Me livrer</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <section class="zone-page">
+    <div class="page"> <span>D</span>ashbord</div>
+  </section>
+  <div id="resultats"></div>
+  <section class="produit">
+    <div class="zone-produit">
+      <div class="bible">
+        <div class="name-type-produit"><span>B</span>ible</div>
+        <div class="list-produit-bible">
+          <div class="corp-produit">
+            <div class="image-bible">
+              <a href="#" class="link-commander-bible"><img src="./img/amis_discuter_bible_back.jpg" alt=""></a>
+            </div>
+            <div class="text-descrip">
+              <div class="name-notation">
+                <div class="name">
+                  <p class="link-commander-bible">Nom produit Bible</p>
+                </div>
+                <div class="rating">
+                  <span class="star" style="color : #f90">&#9733;</span>
+                  <strong style="color:#fb911f; font-size:15px;">0.0</strong><span
+                    style="font-size:10px; color:#fb911f;">/5(0)</span>
+                </div>
+              </div>
+              <p class="txt">quasi explicabo similique</p>
+              <p class="txt1">Minimum order: 2000 FCFA </p>
+            </div>
+            <div id="myModal-bible" class="modal-dialog-produit">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modalTitle-bible">Nom du produit Bible</h5>
+                  <span class="close">&times;</span>
+                </div>
+                <div class="modal-information-produit">
+                  <div class="image-bible"><img src="./img/amis_discuter_bible_back.jpg" alt=""></div>
+                  <div class="modal-description">
+                    <p class="montant-bible">2000 FCFA</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reiciendis
+                      facilis rem voluptas amet commodi recusandae, architecto, veniam doloremque consectetur itaque
+                      quam voluptatem hic mollitia vel, sed et nobis minus.</p>
+                  </div>
+                </div>
+                <div class="quantite">
+                  <label for="quantite">Quantite</label><br>
+                  <input class="quantite-bible" type="number" name="quantite" min="1" id="quantite-bible">
+                </div>
+                <div class="add-pannier">
+                  <input class="ajout-pannier-bible" type="submit" value="Ajouter au pannier">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quantique">
+        <div class="name-type-produit"> <span>C</span>antique</div>
+        <div class="list-produit-quantique">
+          <div class="corp-produit">
+            <div class="image-cantique">
+              <a class="link-commander-cantique" href="#"><img src="./img/amis_discuter_bible_back.jpg" alt=""></a>
+            </div>
+            <div class="text-descrip">
+              <div class="name-notation">
+                <div class="name">
+                  <p class="link-commander-cantique">Nom produit Cantique</p>
+                </div>
+                <div class="rating">
+                  <span class="star" style="color : #f90">&#9733;</span>
+                  <strong style="color:#fb911f; font-size:15px;">0.0</strong><span
+                    style=" font-size:10px; color:#fb911f;">/5(0)</span>
+                </div>
+              </div>
+              <p class="txt">quasi explicabo similique</p>
+              <p class="txt1">Minimum order: 2000 FCFA </p>
+            </div>
+            <div id="myModal-cantique" class="modal-dialog-produit">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modalTitle-cantique">Nom du produit Cantique</h5>
+                  <span class="close">&times;</span>
+                </div>
+                <div class="modal-information-produit">
+                  <div class="image-cantique"><img src="./img/amis_discuter_bible_back.jpg" alt=""></div>
+                  <div class="modal-description">
+                    <p class="montant-cantique">2000 FCFA</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reiciendis
+                      facilis rem voluptas amet commodi recusandae, architecto, veniam doloremque consectetur itaque
+                      quam voluptatem hic mollitia vel, sed et nobis minus.</p>
+                  </div>
+                </div>
+                <div class="quantite">
+                  <label for="quantite">Quantite</label><br>
+                  <input class="quantite-cantique" type="number" name="quantite" min="1" id="quantite-cantique">
+                </div>
+                <div class="add-pannier">
+                  <input class="ajout-pannier-cantique" type="submit" value="Ajouter au pannier">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="manuel">
+        <div class="name-type-produit"> <span>M</span>anuel</div>
+        <div class="list-produit-quantique">
+          <div class="corp-produit">
+            <div class="image-manuel">
+              <a class="link-commander-manuel"><img src="./img/amis_discuter_bible_back.jpg" alt=""></a>
+            </div>
+            <div class="text-descrip">
+              <div class="name-notation">
+                <div class="name">
+                  <p class="link-commander-manuel">Nom produit manuel</p>
+                </div>
+                <div class="rating">
+                  <span class="star" style="color : #f90">&#9733;</span>
+                  <strong style="color:#fb911f; font-size:15px;">0.0</strong><span
+                    style=" font-size:10px; color:#fb911f;">/5(0)</span>
+                </div>
+              </div>
+              <p class="txt">quasi explicabo similique</p>
+              <p class="txt1">Minimum order: 2000 FCFA </p>
+            </div>
+            <div id="myModal-manuel" class="modal-dialog-produit">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modalTitle-manuel">Nom du produit manuel</h5>
+                  <span class="close">&times;</span>
+                </div>
+                <div class="modal-information-produit">
+                  <div class="image-manuel"><img src="./img/amis_discuter_bible_back.jpg" alt=""></div>
+                  <div class="modal-description">
+                    <p class="montant-manuel">2000 FCFA</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reiciendis
+                      facilis rem voluptas amet commodi recusandae, architecto, veniam doloremque consectetur itaque
+                      quam voluptatem hic mollitia vel, sed et nobis minus.</p>
+                  </div>
+                </div>
+                <div class="quantite">
+                  <label for="quantite">Quantite</label><br>
+                  <input class="quantite-manuel" type="number" name="quantite" min="1" id="quantite-manuel">
+                </div>
+                <div class="add-pannier">
+                  <input class="ajout-pannier-manuel" type="submit" value="Ajouter au pannier">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="book">
+        <div class="name-type-produit"> <span>L</span>ire chretien</div>
+        <div class="list-produit-quantique">
+          <div class="corp-produit">
+            <div class="image-book">
+              <a class="link-commander-book"><img src="./img/amis_discuter_bible_back.jpg" alt=""></a>
+            </div>
+            <div class="text-descrip">
+              <div class="name-notation">
+                <div class="name">
+                  <p class="link-commander-book">Nom produit book</p>
+                </div>
+                <div class="rating">
+                  <span class="star" style="color : #f90">&#9733;</span>
+                  <strong style="color:#fb911f; font-size:15px;">0.0</strong><span
+                    style=" font-size:10px; color:#fb911f;">/5(0)</span>
+                </div>
+              </div>
+              <p class="txt">quasi explicabo similique</p>
+              <p class="txt1">Minimum order: 2000 FCFA </p>
+            </div>
+            <div id="myModal-book" class="modal-dialog-produit">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modalTitle-book">Nom du produit book</h5>
+                  <span class="close">&times;</span>
+                </div>
+                <div class="modal-information-produit">
+                  <div class="image-book"><img src="./img/amis_discuter_bible_back.jpg" alt=""></div>
+                  <div class="modal-description">
+                    <p class="montant-book">2000 FCFA</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reiciendis
+                      facilis rem voluptas amet commodi recusandae, architecto, veniam doloremque consectetur itaque
+                      quam voluptatem hic mollitia vel, sed et nobis minus.</p>
+                  </div>
+                </div>
+                <div class="quantite">
+                  <label for="quantite">Quantite</label><br>
+                  <input class="quantite-book" type="number" name="quantite" min="1" id="quantite-book">
+                </div>
+                <div class="add-pannier">
+                  <input class="ajout-pannier-book" type="submit" value="Ajouter au pannier">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fourniture">
+        <div class="name-type-produit"> <span>F</span>ourniture scolaire et accessoire</div>
+        <div class="list-produit-quantique">
+          <div class="corp-produit">
+            <div class="image-bkschool">
+              <a class="link-commander-bkschool"><img src="./img/amis_discuter_bible_back.jpg" alt=""></a>
+            </div>
+            <div class="text-descrip">
+              <div class="name-notation">
+                <div class="name">
+                  <p class="link-commander-bkschool">Nom produit bkschool</p>
+                </div>
+                <div class="rating">
+                  <span class="star" style="color : #f90">&#9733;</span>
+                  <strong style="color:#fb911f; font-size:15px;">0.0</strong><span
+                    style=" font-size:10px; color:#fb911f;">/5(0)</span>
+                </div>
+              </div>
+              <p class="txt">quasi explicabo similique</p>
+              <p class="txt1">Minimum order: 2000 FCFA </p>
+            </div>
+            <div id="myModal-bkschool" class="modal-dialog-produit">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modalTitle-bkschool">Nom du produit bkschool</h5>
+                  <span class="close">&times;</span>
+                </div>
+                <div class="modal-information-produit">
+                  <div class="image-bkschool"><img src="./img/amis_discuter_bible_back.jpg" alt=""></div>
+                  <div class="modal-description">
+                    <p class="montant-bkschool">2000 FCFA</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reiciendis
+                      facilis rem voluptas amet commodi recusandae, architecto, veniam doloremque consectetur itaque
+                      quam voluptatem hic mollitia vel, sed et nobis minus.</p>
+                  </div>
+                </div>
+                <div class="quantite">
+                  <label for="quantite">Quantite</label><br>
+                  <input class="quantite-bkschool" type="number" name="quantite" min="1" id="quantite-bkschool">
+                </div>
+                <div class="add-pannier">
+                  <input class="ajout-pannier-bkschool" type="submit" value="Ajouter au pannier">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="book-school">
+        <div class="name-type-produit"> <span>L</span>ivre scolaire</div>
+        <div class="list-produit-quantique">
+          <div class="corp-produit">
+            <div class="image-bkschoolsec">
+              <a class="link-commander-bkschoolsec"><img src="./img/amis_discuter_bible_back.jpg" alt=""></a>
+            </div>
+            <div class="text-descrip">
+              <div class="name-notation">
+                <div class="name">
+                  <p class="link-commander-bkschoolsec">Nom produit bkschoolsec</p>
+                </div>
+                <div class="rating">
+                  <span class="star" style="color : #f90">&#9733;</span>
+                  <strong style="color:#fb911f; font-size:15px;">0.0</strong><span
+                    style=" font-size:10px; color:#fb911f;">/5(0)</span>
+                </div>
+              </div>
+              <p class="txt">quasi explicabo similique</p>
+              <p class="txt1">Minimum order: 2000 FCFA </p>
+            </div>
+            <div id="myModal-bkschoolsec" class="modal-dialog-produit">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modalTitle-bkschoolsec">Nom du produit bkschoolsec</h5>
+                  <span class="close">&times;</span>
+                </div>
+                <div class="modal-information-produit">
+                  <div class="image-bkschoolsec"><img src="./img/amis_discuter_bible_back.jpg" alt=""></div>
+                  <div class="modal-description">
+                    <p class="montant-bkschoolsec">2000 FCFA</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione reiciendis
+                      facilis rem voluptas amet commodi recusandae, architecto, veniam doloremque consectetur itaque
+                      quam voluptatem hic mollitia vel, sed et nobis minus.</p>
+                  </div>
+                </div>
+                <div class="quantite">
+                  <label for="quantite">Quantite</label><br>
+                  <input class="quantite-bkschoolsec" type="number" name="quantite" min="1" id="quantite-bkschoolsec">
+                </div>
+                <div class="add-pannier">
+                  <input class="ajout-pannier-bkschoolsec" type="submit" value="Ajouter au pannier">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
